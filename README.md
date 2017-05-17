@@ -17,11 +17,12 @@ https://developer.mbed.org/compiler/
 #Compile and download binary file to mbed driver on PC
 #-> press reset button -> run
 ```
-    + For more information
-        * [mbed compiler online](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-Getting-Started)
-        * [mbed export to Ds5](https://developer.mbed.org/teams/Renesas/wiki/Exporting-to-GCC-ARM)
-        * [Update Firmware for Gr board](https://developer.mbed.org/teams/Renesas/wiki/How-to-update-firmware-for-GR-PEACH)
-        * [other know how database](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-knowhow-database)
+
++ For more information
+    * [mbed compiler online](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-Getting-Started)
+    * [mbed export to Ds5](https://developer.mbed.org/teams/Renesas/wiki/Exporting-to-GCC-ARM)
+    * [Update Firmware for Gr board](https://developer.mbed.org/teams/Renesas/wiki/How-to-update-firmware-for-GR-PEACH)
+    * [other know how database](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-knowhow-database)
 
 - Hardware:
     + Schematic
