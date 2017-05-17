@@ -1,7 +1,28 @@
-## Gr Peach board (datasheet, reference manual, schematic...)
+## Gr Peach board
 - Software:
+    + Library [mbed](https://developer.mbed.org/handbook/Homepage#using-mbed-libraries)
+    + Supported function map [mbed](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH_supported_function_map). Note: LCD, Audio In/out library was supported but mbed RTOS needed.
     + To be able to build the example by mbed compiler online
-        * [Getting start](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-Getting-Started)
+```
+#Select and add GrPeach board to mbed compiler 
+https://developer.mbed.org/platforms/
+
+#Install USB communication driver to PC (for Windows only). 
+#Mbed serial port work default on linux
+https://developer.mbed.org/handbook/Windows-serial-configuration
+
+#Import project at mbed compiler online or mbed site
+https://developer.mbed.org/compiler/
+
+#Compile and download binary file to mbed driver on PC
+#-> press reset button -> run
+```
+    + For more information
+        * [mbed compiler online](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-Getting-Started)
+        * [mbed export to Ds5](https://developer.mbed.org/teams/Renesas/wiki/Exporting-to-GCC-ARM)
+        * [Update Firmware for Gr board](https://developer.mbed.org/teams/Renesas/wiki/How-to-update-firmware-for-GR-PEACH)
+        * [other know how database](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-knowhow-database)
+
 - Hardware:
     + Schematic
         * [revision E (X28A-M01E)](https://developer.mbed.org/media/uploads/1050186/x28a-m01-ef.pdf), [revision C (X28A-M01C)](https://developer.mbed.org/media/uploads/1050186/x28a-m01-cd.pdf). ![ver C](./Hardware/rev_c.jpg)
@@ -17,11 +38,13 @@
 - Hardware
     + manual: [link](https://www.renesas.com/en-sg/doc/products/mpumcu/doc/rz/r01uh0403ej0300_rz_a1h.pdf?key=c9238be3bc64539027cf8b0d5eb5b0d8)
 
-## Audio camera shield
-- [link](https://developer.mbed.org/teams/Renesas/wiki/Audio_Camera-shield)
+## Audio camera shield, [link](https://developer.mbed.org/teams/Renesas/wiki/Audio_Camera-shield)
 
-## LCD Shield
-- [link](https://developer.mbed.org/teams/Renesas/wiki/LCD-shield)
+![Audio shield](./Hardware/ac_shield_web.jpg)
 
-## BP3595 WiFi module
-- [link](https://developer.mbed.org/components/BP3595-for-GR-PEACH/)
+## LCD Shield, [link](https://developer.mbed.org/teams/Renesas/wiki/LCD-shield)
+![LCD](./Hardware/full_lcd_ac2_4.jpg)
+![LCD2](./Hardware/lcd7_shield_web_3.jpg)
+
+## BP3595 WiFi module, [link](https://developer.mbed.org/components/BP3595-for-GR-PEACH/)
+![Wifi](./Hardware/BP3595.jpg.200x200_q85.jpg)
