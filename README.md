@@ -32,6 +32,7 @@ https://developer.mbed.org/compiler/
 
 ## RZ/AH1 MCU [link](https://www.renesas.com/en-sg/products/microcontrollers-microprocessors/rz/rza/rza1h.html)
 - Software:
+    + Boot process: [info](./Software/Boot_RZA1H.md)
     + Development tool:
         * [e2 studio](https://www.renesas.com/en-us/products/software-tools/tools/ide/e2studio.html)
         * [mbed compiler](https://developer.mbed.org/handbook/mbed-Tools)
