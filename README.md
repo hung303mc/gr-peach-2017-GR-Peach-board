@@ -1,5 +1,6 @@
 ## Gr Peach board
 - Software:
+    + Main page: [mbed](https://developer.mbed.org/platforms/Renesas-GR-PEACH/)
     + Library [mbed](https://developer.mbed.org/handbook/Homepage#using-mbed-libraries)
     + Supported function map [mbed](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH_supported_function_map). Note: LCD, Audio In/out library was supported but mbed RTOS needed.
     + To be able to build the example by mbed compiler online
@@ -16,6 +17,17 @@ https://developer.mbed.org/compiler/
 
 #Compile and download binary file to mbed driver on PC
 #-> press reset button -> run
+```
+
+    + To be able to build the example by mbed compiler offline with DS-5 and GCC ARM Compiler: [info](https://developer.mbed.org/teams/Renesas/wiki/Exporting-to-GCC-ARM)
+```
+# Install [GCC ARM Embedded](https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q3-update), [make](https://www.cygwin.com/) only for Windows
+
+# Install DS5: [win64](https://silver.arm.com/download/download.tm?pv=1688510), [linux64](https://silver.arm.com/download/download.tm?pv=1688514). Active by code generate in [DS5 for renesas kit](http://ds.arm.com/renesas/)
+
+# Build DS5 enviroment:
+# 1. Open DS5. Select [Window] [Preference] and [DS-5] [Configuration Database]. Add reference to ./Software/configdb_v519-20150327/configdb. Rebuild database.
+# 2. Create debug configuration: TBD (when board is available)
 ```
 
 + For more information
@@ -49,4 +61,5 @@ https://developer.mbed.org/compiler/
 ![LCD2](./Hardware/lcd7_shield_web_3.jpg)
 
 ## BP3595 WiFi module, [link](https://developer.mbed.org/components/BP3595-for-GR-PEACH/)
-![Wifi](./Hardware/BP3595.jpg.200x200_q85.jpg)
+![Wifi](./Hardware/BP3595.jpg.200x200_q85.jpg
+)

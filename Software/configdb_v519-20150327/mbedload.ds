@@ -1,0 +1,48 @@
+######################################
+# Stop DS-5 debugger, PC=0          ##
+######################################
+stop
+reset
+
+######################################
+# Memory configuration              ##
+######################################
+info memory
+memory S:0x00000000 S:0x07ffffff ro
+memory S:0x18000000 S:0x1bffffff ro
+memory S:0x20000000 S:0x209fffff cache 32 noverify
+memory S:0x3fffff80 S:0x3fffffff nocache noverify
+memory S:0xfcfe0000 S:0xfcfeffff nocache noverify
+memory S:0xfc00ffb0 S:0xfc00ffb4 nocache noverify
+
+# INTC2 Register accessed by only 16bit
+memory S:0xfcfef800 S:0xfcfef807 16
+
+# USB Register accessed by only 16bit
+memory S:0xe8010000 S:0xe801010f 16
+memory S:0xe8207000 S:0xe820710f 16
+
+# SDHI Register accessed by only 16bit
+memory S:0xe804e000 S:0xe804e0ff 16
+memory S:0xe804e800 S:0xe804e8ff 16
+info memory
+echo "before writing to on-chip RAM"
+######################################
+# Release L2 cache standby          ##
+######################################
+mem set 0x3fffff80 32 0x00000001
+
+######################################
+# Allow write access for RAM        ##
+######################################
+# ;*Writing to On-Chip Data-Retention RAM is enabled.
+# ;SYSCR3.RRAMWE3=RRAMWE2=RRAMWE1=RRAMWE0=1
+memory set S:0xfcfe0400 0 0x3f
+x/b 0xfcfe0400
+memory set S:0xfcfe0404 0 0x3f
+x/b 0xfcfe0404
+memory set S:0xfcfe0408 0 (unsigned char) 0x0f
+x/b 0xfcfe0408
+echo "after enabling"
+
+set var $Core::$PC = 0x20000000

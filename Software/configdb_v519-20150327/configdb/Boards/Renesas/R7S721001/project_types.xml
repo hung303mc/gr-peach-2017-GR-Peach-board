@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Copyright (C) 2009-2013 ARM Limited. All rights reserved.--><platform_data xmlns="http://www.arm.com/project_type" xmlns:peripheral="http://com.arm.targetconfigurationeditor" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="HARDWARE" xsi:schemaLocation="http://www.arm.com/project_type ../../../Schemas/platform_data-1.xsd">
+    <toolkit>renrz_sk</toolkit>
+    <toolkit>renrz_tk</toolkit>
+    <flash_config>CDB://ml25l6435_flash.xml</flash_config>
+    <project_type_list>
+        <xi:include href="../../../Gdbserver/tcp_project_types.xml"/>
+        <project_type type="BARE_METAL">
+            <name language="en">Bare Metal Debug</name>
+            <description language="en">This allows a bare-metal debug connection.</description>
+            <execution_environment id="BARE_METAL">
+                <name language="en">Bare Metal Debug</name>
+                <description language="en">This allows a bare metal debug connection.</description>
+                <param default="CDB://Renesas_R7S72100.rvc" id="config_file" type="string" visible="false"/>
+                <param default="CDB://dtsl_config_script.py" id="dtsl_config_script" type="string" visible="false"/>
+                <param default="options.trace.traceCapture" id="dtsl_tracecapture_option" type="string" visible="false"/>
+                <xi:include href="../../../Include/hardware_address.xml"/>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <description language="en">DS-5 Debugger will connect to a Toragi CMSIS-DAP to debug a bare metal application.</description>
+                    <connection_type language="en">Toragi CMSIS-DAP</connection_type>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_CMSIS" id="dtsl_config" type="string" visible="false"/>
+                    <browse_script>
+                        <name language="en">CDB://../../../Scripts/device_browser.py</name>
+                        <arguments>
+                            --app=DS5://sw/debughw/browse/browse_cmsis_dap --arg=0x0d28 --arg=0x0019
+                        </arguments>
+                    </browse_script>
+                    <setup_script>
+                        <name>CDB://../../../Scripts/cmsis_dap_debug_server.py</name>
+                        <arguments>CDB://rddi-dap_cfg-osda-cmsis-toragi.txt</arguments>
+                    </setup_script>
+                <features>fa3f755119ad7dfc8050aa0b10744ac04fc5fc1074ddf221a8ccea39e914b36c3d4db149f8be47a28d34e8a506da523e9cfde14a3d5821abc0aa76f398a4f8456152f3f38a0f1b555372f0f5e9ed086402a1c38a6a285487ad4ee015a63a713ef3df72ffaea3b5fd3164366e2befee38211acc9a9a4bca1705e803bece90c34d</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/mbed_activity_description_bm.xml"/>
+                    <xi:include href="../../../Include/mbed_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/mbed_browse_script.xml"/>
+                    <xi:include href="../../../Include/mbed_setup_script.xml"/>
+                <features>8f7426e8ed9115671cdd499d8ada839d9e36fa12a71a74f8b9c80446a6d67b740d22e7de38166227990dcc653207e708428ec8dc74dbb23b65961355c5e8d23dcd1bef43a30624aa0c5bcdea38a9def0c409ec7467c73b710c48b298bb80c2b2a30ea1438d7017c0d9e7bef9158ec891211acc9a9a4bca17332a9503ae97fc0c</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/ulink2_activity_description_bm.xml"/>
+                    <xi:include href="../../../Include/ulink2_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK2" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/ulink2_browse_script.xml"/>
+                    <xi:include href="../../../Include/ulink2_setup_script.xml"/>
+                <features>f50237cde4b839c82aa703c6ebbbe14cb40080bfad55721a7dd7963094f9c6b4b2291de843658b36990dcc653207e7087df7b25f9cf4984ef4eacc3cd1c4770acd1bef43a30624aa9e76939dc0fc17670344a2d2e42a0ce80a36af1d19c020a6844ee0fcd65449cdd136878778fe3ba2</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/ulinkpro_activity_description.xml"/>
+                    <xi:include href="../../../Include/ulinkpro_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/ulinkpro_browse_script.xml"/>
+                    <xi:include href="../../../Include/ulinkpro_setup_script.xml"/>
+                <features>907acaf72eff662963190c14ee3d692549212d8e949181ebe398fe7664f9b6ca25d881ee30e1a067cd1bef43a30624aad5af21239294a9f8622fc970fb2016a4990dcc653207e708428ec8dc74dbb23bbe4a50eab64c9f7090779b456599950711a85001227deb4f7525328ec54e809596ceac0888159e13</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/ulinkprod_activity_description.xml"/>
+                    <xi:include href="../../../Include/ulinkprod_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/ulinkprod_browse_script.xml"/>
+                    <xi:include href="../../../Include/ulinkprod_setup_script.xml"/>
+                <features>146df67cc23f2eba40ac60e8624674b231c6617e210c2b9d38831f89590db482f8fab0be0484566dcd1bef43a30624aa18535163333dc89d3d4db149f8be47a28d34e8a506da523ebd4e3a6347fec10dc0b2ed339d4b0df50a36af1d19c020a60cb2d65cc02d34b04881145a38c567b7b50fe8d435987b71</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/dstream_activity_description_bm.xml"/>
+                    <xi:include href="../../../Include/dstream_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_DSTREAM" id="dtsl_config" type="string" visible="false"/>
+                <features>c4821b1e8ea2d2e88338cfa84cf823d8f76164a99cc3240429387c79128edf0e30233a572c22a84bcd1bef43a30624aa49f2a1e555aa66483d4db149f8be47a28d34e8a506da523e00a181724515441030f89306c7af350a00849908e0ab2818ecb179efcbf2a33b1fd123eb3aeb80ed</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/rvi_activity_description_bm.xml"/>
+                    <xi:include href="../../../Include/rvi_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_RVI" id="dtsl_config" type="string" visible="false"/>
+                <features>7e7c7875fb464a68c30d18ce888def43662fa84990f7d8280796c6d624a4b9167bc8cbebb49eb17d6152f3f38a0f1b55f9bc9f58fa768a9b9ac57cccf82a81526152f3f38a0f1b55207ed4d72e07c8c414423c633a77b8480a36af1d19c020a61bad19c8f650231ff7f490398b3de225</features></activity>
+            </execution_environment>
+        </project_type>
+        <project_type os_abstraction="LINUX_KERNEL" type="BARE_METAL">
+            <name language="en">Linux Kernel and/or Device Driver Debug</name>
+            <description language="en">This allows a bare metal debug connection for Linux kernel or Linux device driver debug.</description>
+            <execution_environment id="bare_metal_linux_kernel_debug">
+                <name language="en">Linux Kernel Debug</name>
+                <description language="en">Connect to a platform using a DSTREAM/RVI</description>
+                <param default="CDB://Renesas_R7S72100.rvc" id="config_file" type="string" visible="false"/>
+                <param default="CDB://dtsl_config_script.py" id="dtsl_config_script" type="string" visible="false"/>
+                <xi:include href="../../../Include/hardware_address.xml"/>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <description language="en">DS-5 Debugger will connect to a Toragi CMSIS-DAP to debug a Linux kernel.</description>
+                    <connection_type language="en">Toragi CMSIS-DAP</connection_type>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_CMSIS" id="dtsl_config" type="string" visible="false"/>
+                    <browse_script>
+                        <name language="en">CDB://../../../Scripts/device_browser.py</name>
+                        <arguments>
+                            --app=DS5://sw/debughw/browse/browse_cmsis_dap --arg=0x0d28 --arg=0x0019
+                        </arguments>
+                    </browse_script>
+                    <setup_script>
+                        <name>CDB://../../../Scripts/cmsis_dap_debug_server.py</name>
+                        <arguments>CDB://rddi-dap_cfg-osda-cmsis-toragi.txt</arguments>
+                    </setup_script>
+                <features>555c4f8d7c15a68b05e1ed990fc8fc292511521af764cf8aefcaab4aec268bb43e00be31e87c6a6b4f4a3ac8b29943ca19f6fcb624a16e35634303a43d64969e0c624dc6f32b81db13274a3fcaedb3f8fb4916f15d41bb8e6ba47e8465ced7fa4320771b1a0f76d430f89306c7af350a00849908e0ab28180e11acb93178ea176a2c4679b32d3a5817eb1cda789436c7</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/mbed_activity_description_lk.xml"/>
+                    <xi:include href="../../../Include/mbed_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/mbed_browse_script.xml"/>
+                    <xi:include href="../../../Include/mbed_setup_script.xml"/>
+                <features>0545800b05f7e73d6ff781a0fc37b4c34583927ec7f91d56c8019c5484dfe330cabd0fa383f616384f4a3ac8b29943ca19f6fcb624a16e35634303a43d64969e0c624dc6f32b81db2a41e5d43991c1601a44f645508e03e2bd446590d687a29b065fe93ba4228cf1b44627898603683a5451b3f4cc34756dd8db0d244489586abe2f5108c4c0356a44416faf94947b15</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/ulink2_activity_description_lk.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK2" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/ulink2_connection_type.xml"/>
+                    <xi:include href="../../../Include/ulink2_browse_script.xml"/>
+                    <xi:include href="../../../Include/ulink2_setup_script.xml"/>
+                <features>e5e639dfc01f128df2968982fb95bbe7f2980bc4e7bd41b6c0c79c092b5b1178d848be9e1e60c792d8b1e98457dc66bb96907189ca6a1ca3f4dcd197dac0909df7d52e9516cb2a434d6c7de898b13ce095147a8b2d6bfdae28227e31eeeca5197b3431c237df0fc88a7309bf8857f01c90779b456599950711a85001227deb4f1bcf962764d5fbd9384ef09967fe8bef</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/ulinkpro_activity_description_lk.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/ulinkpro_connection_type.xml"/>
+                    <xi:include href="../../../Include/ulinkpro_browse_script.xml"/>
+                    <xi:include href="../../../Include/ulinkpro_setup_script.xml"/>
+                <features>f81936965945b8ac81d8542a2943a5e1e2730a3a21b91e0a3e760137598c1c721a44f645508e03e211b26ddd0c6dcdc858c14b677e5dec3a07614a4c9d26cefb090177674b3137295385f9fcb118aef41a44f645508e03e2bd446590d687a29bfac8752ce7bd227702a1c38a6a285487ad4ee015a63a713ed991a105d268626428cb60ba57221d61d316a4817136fb5c</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/ulinkprod_activity_description_lk.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_ULINK" id="dtsl_config" type="string" visible="false"/>
+                    <xi:include href="../../../Include/ulinkprod_connection_type.xml"/>
+                    <xi:include href="../../../Include/ulinkprod_browse_script.xml"/>
+                    <xi:include href="../../../Include/ulinkprod_setup_script.xml"/>
+                <features>6a1c2631d5b6fa1540ac60e8624674b29e36fa12a71a74f8fa5622459d1a5671061ff2b8bf994a3d28227e31eeeca519c4695f923c932a83968392f503082ffd4f3076e3f9edf49b5df90689ecf9a8c81a44f645508e03e2bd446590d687a29b6120939ead9b014dc409ec7467c73b710c48b298bb80c2b22145d9a114c2ff4228cb60ba57221d617bae75a2665acebd</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/dstream_activity_description_lk.xml"/>
+                    <xi:include href="../../../Include/dstream_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_DSTREAM" id="dtsl_config" type="string" visible="false"/>
+                    <param default="options.trace.traceCapture" id="dtsl_tracecapture_option" type="string" visible="false"/>
+                <features>1c3d324dab5e832030c5cc2197dd5a75e2730a3a21b91e0ad8d5b5311e6a4e6e1a44f645508e03e211b26ddd0c6dcdc858c14b677e5dec3a07614a4c9d26cefb090177674b3137294b1f69502eca9d06d8b1e98457dc66bb3c54b600f01bdbf6d1f956fdc640d90bb44627898603683a5451b3f4cc34756d816ec70a5fca09c8fd9c8bd347943298</features></activity>
+                <activity id="ICE_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Debug Cortex-A9</name>
+                    <xi:include href="../../../Include/rvi_activity_description_lk.xml"/>
+                    <xi:include href="../../../Include/rvi_connection_type.xml"/>
+                    <core connection_id="Cortex-A9" core_ref="Cortex-A9" soc="renesas/RZ_A1H"/>
+                    <param default="DtslScript_RVI" id="dtsl_config" type="string" visible="false"/>
+                <features>975925b57ecee4b2d8bb42235639e3a488d3107b33f122be0796c6d624a4b91649120bfdf6c7338a28227e31eeeca519c4695f923c932a83968392f503082ffd4f3076e3f9edf49bc9029f517b185dd2df20fa3026abf2694f4a3ac8b29943ca6eb965072b2055a10aa606cc9e95585f0a36af1d19c020a691173192b8971b8cd5be014160401c9975f8a70f20b26a45</features></activity>
+            </execution_environment>
+        </project_type>
+        <project_type type="GDB_SERVER" xsi:schemaLocation="http://www.arm.com/project_type ../Schemas/platform_data-1.xsd">
+            <name language="en">Linux Application Debug</name>
+            <description language="en">This allows Linux application debug using gdbserver.</description>
+            <execution_environment id="gdb_tcp" xsi:schemaLocation="http://www.arm.com/project_type ../Schemas/platform_data-1.xsd">
+                <name language="en">gdbserver (TCP)</name>
+                <description language="en">Connect to a platform running gdbserver using a TCP connection.</description>
+                <param default="" id="gdb_address" rvc_tag="host" type="string">
+                    <name language="en">Address:</name>
+                    <description language="en">Address of Target (TCP/IP).</description>
+                </param>
+                <param default="5000" id="gdb_port" rvc_tag="port" type="string">
+                    <name language="en">Port:</name>
+                    <description language="en">Debug Port on Target.</description>
+                </param>
+                <param default="False" id="gdb_disable_acks" type="string" visible="false"/>
+                <config_file>gdbserver.xml</config_file>
+                <xi:include href="../../../Gdbserver/symbols_glibc_2_10_1.xml"/>
+                <activity id="DOWNLOAD_DEBUG" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Download and debug application</name>
+                    <description language="en">DS-5 Debugger will download your application to the target system and then start a new gdbserver session to debug the application. This configuration requires ssh and gdbserver on the target platform. </description>
+                    <core connection_id="0" core_definition="GDBServerPseudoCore"/>
+                    <setup_script>
+                        <name language="en">RSE://</name>
+                    </setup_script>
+                <features>089f797a52eaa4fbff966efa788e65aee2730a3a21b91e0a01ec158ec075e7f93a2f9317d73d6a5b6b0a7e6086af81b7482cf2c9130a346c5df90689ecf9a8c8d88bae02778c31f6685e43a41992cd1eb9d2746f40da974ff3be2680e14989e19a4187c7944ac70b4d3b91859141da72df39bd117b28991fca09c3f13bddea8cf4074fc0bae1f2fc</features></activity>
+                <activity id="DEBUG_RESIDENT_APP" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Start gdbserver and debug target resident application</name>
+                    <description language="en">DS-5 Debugger will connect to the target and start a new gdbserver session to debug an application already present on the target system. This configuration requires ssh and gdbserver on the target platform. </description>
+                    <core connection_id="0" core_definition="GDBServerPseudoCore"/>
+                    <setup_script>
+                        <name language="en">RSE://</name>
+                    </setup_script>
+                <features>9cfc5e95b32c83b94fceb7f429bc0a8f4fc5fc1074ddf2215b247191f368c5b40e6fdd08ff43cd85ae1b25f6ae934aa61e62de567d7ae2842ac104a2d598eb7cd88bae02778c31f6685e43a41992cd1e570a2e317641fb7ad94a94d13742dc800755399e346d2847af65dbf29d016f97aa42defad58232f3814719e5d2f8270305d01eff83e2f286236aff8d25908a84ca09c3f13bddea8c393cdc5f2b77518e</features></activity>
+                <activity id="CONNECT_TO_GDB_SERVER" type="Debug">
+                    <filter>renrz_sk</filter>
+                    <filter>renrz_tk</filter>
+                    <name language="en">Connect to already running gdbserver</name>
+                    <description language="en">DS-5 Debugger will connect to an already running gdbserver on the target system.</description>
+                    <core connection_id="0" core_definition="GDBServerPseudoCore"/>
+                <features>bbed5c79bc84c1d840ac60e8624674b2c51ad1e3bde8ccbfa2a2acff795368cd4b7b696de6486777256782501bbe4d83dc2a5caaa3a60c98cc77a49f969bc328030aaccb92692649f3576662313a95d004cc79883d6d2513e4341b0efdd626a885414243974de0681911d0b63b88f88e92026a5a0ae949d386b97cbe2ec8d3d30e6cb83932f0c572a942bec5de6b02be</features></activity>
+            </execution_environment>
+        </project_type>
+    </project_type_list>
+</platform_data>

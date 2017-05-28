@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.arm.eclipse.build.config.baremetal.exe.debug.1910477576">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arm.eclipse.build.config.baremetal.exe.debug.1910477576" moduleId="org.eclipse.cdt.core.settings" name="Build">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.arm.eclipse.builder.armcc.error" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="clean" description="" id="com.arm.eclipse.build.config.baremetal.exe.debug.1910477576" name="Build" parent="com.arm.eclipse.build.config.baremetal.exe.debug" postbuildStep="fromelf --bin &quot;${ProjDirPath}/Build/${ProjName}.axf&quot; -o &quot;../${ProjName}.bin&quot;">
+					<folderInfo id="com.arm.eclipse.build.config.baremetal.exe.debug.1910477576." name="/" resourcePath="">
+						<toolChain id="com.arm.toolchain.baremetal.exe.debug.1293445387" name="ARM Compiler" superClass="com.arm.toolchain.baremetal.exe.debug">
+							<targetPlatform id="com.arm.eclipse.build.config.baremetal.exe.debug.1910477576..2093450286" name=""/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/ds5_rz_a1h/Build}" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.2019880438" incrementalBuildTarget="all" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool id="com.arm.tool.c.compiler.baremetal.exe.debug.518028859" name="ARM C Compiler" superClass="com.arm.tool.c.compiler.baremetal.exe.debug">
+								<option defaultValue="com.arm.tool.c.compiler.option.optlevel.min" id="com.arm.tool.c.compiler.baremetal.exe.debug.base.option.opt.1180250481" superClass="com.arm.tool.c.compiler.baremetal.exe.debug.base.option.opt" useByScannerDiscovery="true" valueType="enumerated"/>
+							</tool>
+							<tool id="com.arm.tool.cpp.compiler.baremetal.exe.debug.773836201" name="ARM C++ Compiler" superClass="com.arm.tool.cpp.compiler.baremetal.exe.debug">
+								<option id="com.arm.tool.c.compiler.option.incpath.337015821" name="Include path (-I)" superClass="com.arm.tool.c.compiler.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/.}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/.}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TARGET_RENESAS}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TARGET_RENESAS/TARGET_RZ_A1H}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TARGET_RENESAS/TARGET_RZ_A1H/device}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TARGET_RENESAS/TARGET_RZ_A1H/device/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TARGET_RENESAS/TARGET_RZ_A1H/device/inc/iobitmasks}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TARGET_RENESAS/TARGET_RZ_A1H/device/inc/iodefines}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/drivers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/hal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/platform}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/}&quot;"/>
+								</option>
+								<option id="com.arm.tool.c.compiler.option.targetcpu.1479931161" name="Target CPU (--cpu)" superClass="com.arm.tool.c.compiler.option.targetcpu" value="Cortex-A9" valueType="string"/>
+								<option id="com.arm.tool.c.compiler.option.defmac.278202630" superClass="com.arm.tool.c.compiler.option.defmac" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="TARGET_MBRZA1H"/>
+									<listOptionValue builtIn="false" value="DEVICE_ERROR_PATTERN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_SPI=1"/>
+									<listOptionValue builtIn="false" value="__FPU_PRESENT"/>
+									<listOptionValue builtIn="false" value="FEATURE_LWIP=1"/>
+									<listOptionValue builtIn="false" value="__MBED__=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_I2CSLAVE=1"/>
+									<listOptionValue builtIn="false" value="TARGET_LIKE_MBED"/>
+									<listOptionValue builtIn="false" value="DEVICE_PORTINOUT=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_PORTIN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_RTC=1"/>
+									<listOptionValue builtIn="false" value="TOOLCHAIN_object"/>
+									<listOptionValue builtIn="false" value="__CMSIS_RTOS"/>
+									<listOptionValue builtIn="false" value="__EVAL"/>
+									<listOptionValue builtIn="false" value="TARGET_CORTEX_A"/>
+									<listOptionValue builtIn="false" value="DEVICE_I2C_ASYNCH=1"/>
+									<listOptionValue builtIn="false" value="ARM_MATH_CA9"/>
+									<listOptionValue builtIn="false" value="TARGET_UVISOR_UNSUPPORTED"/>
+									<listOptionValue builtIn="false" value="__MBED_CMSIS_RTOS_CA9"/>
+									<listOptionValue builtIn="false" value="MBED_BUILD_TIMESTAMP=1495976718.5"/>
+									<listOptionValue builtIn="false" value="TARGET_LIKE_CORTEX_A9"/>
+									<listOptionValue builtIn="false" value="DEVICE_SERIAL=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_INTERRUPTIN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_I2C=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_PORTOUT=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_STDIO_MESSAGES=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_SPI_ASYNCH=1"/>
+									<listOptionValue builtIn="false" value="TARGET_RENESAS"/>
+									<listOptionValue builtIn="false" value="TARGET_RELEASE"/>
+									<listOptionValue builtIn="false" value="DEVICE_SERIAL_FC=1"/>
+									<listOptionValue builtIn="false" value="TARGET_A9"/>
+									<listOptionValue builtIn="false" value="__CORTEX_A9"/>
+									<listOptionValue builtIn="false" value="TARGET_RZ_A1H"/>
+									<listOptionValue builtIn="false" value="DEVICE_SERIAL_ASYNCH=1"/>
+									<listOptionValue builtIn="false" value="TARGET_FF_ARDUINO"/>
+									<listOptionValue builtIn="false" value="DEVICE_CAN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_ETHERNET=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_SPISLAVE=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_ANALOGIN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_PWMOUT=1"/>
+									<listOptionValue builtIn="false" value="TOOLCHAIN_ARM"/>
+									<listOptionValue builtIn="false" value="TOOLCHAIN_ARM_STD"/>
+								</option>
+								<option defaultValue="com.arm.tool.c.compiler.option.optlevel.min" id="com.arm.tool.cpp.compiler.baremetal.exe.debug.base.option.opt.736539917" superClass="com.arm.tool.cpp.compiler.baremetal.exe.debug.base.option.opt" valueType="enumerated"/>
+								<inputType id="com.arm.tool.c.compiler.input.982666453" superClass="com.arm.tool.c.compiler.input"/>
+								<inputType id="com.arm.tool.cpp.compiler.input.1990808204" superClass="com.arm.tool.cpp.compiler.input"/>
+							</tool>
+							<tool id="com.arm.tool.assembler.1188306347" name="ARM Assembler" superClass="com.arm.tool.assembler">
+								<option id="com.arm.tool.assembler.option.cpu.1673465082" name="Target CPU (--cpu)" superClass="com.arm.tool.assembler.option.cpu" value="Cortex-A9" valueType="string"/>
+								<inputType id="com.arm.tool.assembler.input.2003556831" superClass="com.arm.tool.assembler.input"/>
+							</tool>
+							<tool id="com.arm.tool.c.linker.2036393580" name="ARM Linker" superClass="com.arm.tool.c.linker">
+								<option id="com.arm.tool.c.linker.option.cpu.419580654" name="Target CPU (--cpu)" superClass="com.arm.tool.c.linker.option.cpu" value="Cortex-A9" valueType="string"/>
+								<option id="com.arm.tool.c.linker.option.scatter.1235987457" name="Scatter file (--scatter)" superClass="com.arm.tool.c.linker.option.scatter" value="${ProjDirPath}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/MBRZA1H.sct" valueType="string"/>
+								<option id="com.arm.tool.c.linker.userobjs.1389137013" name="Other object files" superClass="com.arm.tool.c.linker.userobjs" valueType="userObjs">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/RZ_A1_Init.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/analogin_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/can_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/cmsis_nvic.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/ethernet_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/gic.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/gpio_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/gpio_irq_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/i2c_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/mbed_board.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/mbed_retarget.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/mbed_sf_boot.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/mmu_Renesas_RZ_A1.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/nvic_wrapper.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/pinmap.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/pl310.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/port_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/pwmout_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/rtc_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/rza_io_regrw.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/serial_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/spi_api.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/startup_MBRZA1H.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/system_MBRZA1H.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/us_ticker.o}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/mbed/TARGET_RZ_A1H/TOOLCHAIN_ARM_STD/mbed.ar}&quot;"/>
+								</option>
+								<inputType id="com.arm.tool.c.linker.input.806269116" superClass="com.arm.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinputdependency" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.arm.tool.librarian.731120140" name="ARM Librarian" superClass="com.arm.tool.librarian"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.arm.eclipse.build.config.baremetal.exe.release.751106089">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arm.eclipse.build.config.baremetal.exe.release.751106089" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.arm.eclipse.builder.armcc.error" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="clean" description="" id="com.arm.eclipse.build.config.baremetal.exe.release.751106089" name="Release" parent="com.arm.eclipse.build.config.baremetal.exe.release">
+					<folderInfo id="com.arm.eclipse.build.config.baremetal.exe.release.751106089." name="/" resourcePath="">
+						<toolChain id="com.arm.toolchain.baremetal.exe.release.531116686" name="ARM Compiler" superClass="com.arm.toolchain.baremetal.exe.release">
+							<targetPlatform id="com.arm.eclipse.build.config.baremetal.exe.release.751106089..723232367" name=""/>
+							<builder buildPath="${workspace_loc:/ds5_rz_a1h/Release}" id="com.arm.toolchain.baremetal.builder.2017314066" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.arm.toolchain.baremetal.builder"/>
+							<tool id="com.arm.tool.c.compiler.baremetal.exe.release.920331842" name="ARM C Compiler" superClass="com.arm.tool.c.compiler.baremetal.exe.release">
+								<option defaultValue="com.arm.tool.c.compiler.option.optlevel.high" id="com.arm.tool.c.compiler.baremetal.exe.release.base.option.opt.2001269343" superClass="com.arm.tool.c.compiler.baremetal.exe.release.base.option.opt" useByScannerDiscovery="true" valueType="enumerated"/>
+							</tool>
+							<tool id="com.arm.tool.cpp.compiler.baremetal.exe.release.487140164" name="ARM C++ Compiler" superClass="com.arm.tool.cpp.compiler.baremetal.exe.release">
+								<option id="com.arm.tool.c.compiler.option.defmac.813110551" superClass="com.arm.tool.c.compiler.option.defmac" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="TARGET_MBRZA1H"/>
+									<listOptionValue builtIn="false" value="DEVICE_ERROR_PATTERN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_SPI=1"/>
+									<listOptionValue builtIn="false" value="__FPU_PRESENT"/>
+									<listOptionValue builtIn="false" value="FEATURE_LWIP=1"/>
+									<listOptionValue builtIn="false" value="__MBED__=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_I2CSLAVE=1"/>
+									<listOptionValue builtIn="false" value="TARGET_LIKE_MBED"/>
+									<listOptionValue builtIn="false" value="DEVICE_PORTINOUT=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_PORTIN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_RTC=1"/>
+									<listOptionValue builtIn="false" value="TOOLCHAIN_object"/>
+									<listOptionValue builtIn="false" value="__CMSIS_RTOS"/>
+									<listOptionValue builtIn="false" value="__EVAL"/>
+									<listOptionValue builtIn="false" value="TARGET_CORTEX_A"/>
+									<listOptionValue builtIn="false" value="DEVICE_I2C_ASYNCH=1"/>
+									<listOptionValue builtIn="false" value="ARM_MATH_CA9"/>
+									<listOptionValue builtIn="false" value="TARGET_UVISOR_UNSUPPORTED"/>
+									<listOptionValue builtIn="false" value="__MBED_CMSIS_RTOS_CA9"/>
+									<listOptionValue builtIn="false" value="MBED_BUILD_TIMESTAMP=1495976718.5"/>
+									<listOptionValue builtIn="false" value="TARGET_LIKE_CORTEX_A9"/>
+									<listOptionValue builtIn="false" value="DEVICE_SERIAL=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_INTERRUPTIN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_I2C=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_PORTOUT=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_STDIO_MESSAGES=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_SPI_ASYNCH=1"/>
+									<listOptionValue builtIn="false" value="TARGET_RENESAS"/>
+									<listOptionValue builtIn="false" value="TARGET_RELEASE"/>
+									<listOptionValue builtIn="false" value="DEVICE_SERIAL_FC=1"/>
+									<listOptionValue builtIn="false" value="TARGET_A9"/>
+									<listOptionValue builtIn="false" value="__CORTEX_A9"/>
+									<listOptionValue builtIn="false" value="TARGET_RZ_A1H"/>
+									<listOptionValue builtIn="false" value="DEVICE_SERIAL_ASYNCH=1"/>
+									<listOptionValue builtIn="false" value="TARGET_FF_ARDUINO"/>
+									<listOptionValue builtIn="false" value="DEVICE_CAN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_ETHERNET=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_SPISLAVE=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_ANALOGIN=1"/>
+									<listOptionValue builtIn="false" value="DEVICE_PWMOUT=1"/>
+									<listOptionValue builtIn="false" value="TOOLCHAIN_ARM"/>
+									<listOptionValue builtIn="false" value="TOOLCHAIN_ARM_STD"/>
+								</option>
+								<option defaultValue="com.arm.tool.c.compiler.option.optlevel.high" id="com.arm.tool.cpp.compiler.baremetal.exe.release.base.option.opt.187212848" superClass="com.arm.tool.cpp.compiler.baremetal.exe.release.base.option.opt" valueType="enumerated"/>
+								<inputType id="com.arm.tool.c.compiler.input.79502875" superClass="com.arm.tool.c.compiler.input"/>
+								<inputType id="com.arm.tool.cpp.compiler.input.192669519" superClass="com.arm.tool.cpp.compiler.input"/>
+							</tool>
+							<tool id="com.arm.tool.assembler.1423278729" name="ARM Assembler" superClass="com.arm.tool.assembler">
+								<inputType id="com.arm.tool.assembler.input.1112252872" superClass="com.arm.tool.assembler.input"/>
+							</tool>
+							<tool id="com.arm.tool.c.linker.1149702455" name="ARM Linker" superClass="com.arm.tool.c.linker">
+								<inputType id="com.arm.tool.c.linker.input.2130902749" superClass="com.arm.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.arm.tool.librarian.710017326" name="ARM Librarian" superClass="com.arm.tool.librarian"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="ds5_rz_a1h.com.arm.eclipse.build.project.baremetal.exe.579849103" name="Bare-metal Executable" projectType="com.arm.eclipse.build.project.baremetal.exe"/>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="1">
+		<resource resourceType="PROJECT" workspacePath="/ds5_rz_a1h"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.arm.eclipse.build.config.baremetal.exe.debug.1910477576;com.arm.eclipse.build.config.baremetal.exe.debug.1910477576.;com.arm.tool.cpp.compiler.baremetal.exe.debug.773836201;com.arm.tool.cpp.compiler.input.1990808204">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.arm.eclipse.builder.armcc.ARMCompilerDiscoveryProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.arm.eclipse.build.config.baremetal.exe.debug.1910477576;com.arm.eclipse.build.config.baremetal.exe.debug.1910477576.;com.arm.tool.cpp.compiler.baremetal.exe.debug.773836201;com.arm.tool.c.compiler.input.982666453">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.arm.eclipse.builder.armcc.ARMCompilerDiscoveryProfile"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+</cproject>
