@@ -29,6 +29,10 @@ https://developer.mbed.org/compiler/
 # 1. Open DS5. Select [Window] [Preference] and [DS-5] [Configuration Database]. Add reference to ./Software/configdb_v519-20150327/configdb. Rebuild database.
 # 2. Create debug configuration: TBD (when board is available)
 ```
+    
++ Debug in mbed: 
+        * use printf (don't use in interrupt context) [printf function](https://docs.mbed.com/docs/mbed-os-handbook/en/latest/debugging/printf/#printf-from-an-interrupt-context "ref1"), [CMSIS-RTOS](https://developer.mbed.org/handbook/CMSIS-RTOS "ref2")
++ mbed interface [DAPLink](https://docs.mbed.com/docs/mbed-os-handbook/en/latest/advanced/DAP/ "DAPLink"), [git repo](https://github.com/mbedmicro/DAPLink/blob/master/README.md "git repo")
 
 + For more information
     * [mbed compiler online](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH-Getting-Started)
@@ -38,8 +42,8 @@ https://developer.mbed.org/compiler/
 
 - Hardware:
     + Schematic
-        * [revision E (X28A-M01E)](https://developer.mbed.org/media/uploads/1050186/x28a-m01-ef.pdf), [revision C (X28A-M01C)](https://developer.mbed.org/media/uploads/1050186/x28a-m01-cd.pdf). ![ver C](./Hardware/rev_c.jpg)
-        * [revision B(X28A-M01B)](http://www.core.co.jp/product/m2m/gr-peach/pdf/history/gr-peach_circuit_b.pdf). ![ver B](./Hardware/rev_b.jpg)
+        * [revision E (X28A-M01E)](https://developer.mbed.org/media/uploads/1050186/x28a-m01-ef.pdf), [revision C (X28A-M01C)](https://developer.mbed.org/media/uploads/1050186/x28a-m01-cd.pdf). ![ver C](./Hardware/rev_c.jpg "verC")
+        * [revision B(X28A-M01B)](http://www.core.co.jp/product/m2m/gr-peach/pdf/history/gr-peach_circuit_b.pdf). ![ver B](./Hardware/rev_b.jpg "verB")
     + Jumper setting: [link](https://developer.mbed.org/teams/Renesas/wiki/Jumper-settings-of-GR-PEACH)
 
 ## RZ/AH1 MCU [link](https://www.renesas.com/en-sg/products/microcontrollers-microprocessors/rz/rza/rza1h.html)
@@ -54,12 +58,11 @@ https://developer.mbed.org/compiler/
 
 ## Audio camera shield, [link](https://developer.mbed.org/teams/Renesas/wiki/Audio_Camera-shield)
 
-![Audio shield](./Hardware/ac_shield_web.jpg)
+![Audio shield](./Hardware/ac_shield_web.jpg "Audio shield")
 
 ## LCD Shield, [link](https://developer.mbed.org/teams/Renesas/wiki/LCD-shield)
-![LCD](./Hardware/full_lcd_ac2_4.jpg)
-![LCD2](./Hardware/lcd7_shield_web_3.jpg)
+![LCD](./Hardware/full_lcd_ac2_4.jpg "LCD")
+![LCD2](./Hardware/lcd7_shield_web_3.jpg "LCD2")
 
 ## BP3595 WiFi module, [link](https://developer.mbed.org/components/BP3595-for-GR-PEACH/)
-![Wifi](./Hardware/BP3595.jpg.200x200_q85.jpg
-)
+![Wifi](./Hardware/BP3595.jpg.200x200_q85.jpg "Wifi")

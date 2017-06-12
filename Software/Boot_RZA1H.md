@@ -51,3 +51,8 @@
 
 - Boot in RCar (CONFIDENTIAL)
 - Boot in RZA1H
+
+## FAQ
+- CS0 page
+- Default boot mode
+- When program run on internal Flash
