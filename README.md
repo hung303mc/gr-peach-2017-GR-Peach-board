@@ -2,6 +2,7 @@
 - Software:
     + Main page: [mbed](https://developer.mbed.org/platforms/Renesas-GR-PEACH/)
     + Library [mbed](https://developer.mbed.org/handbook/Homepage#using-mbed-libraries)
+    + Code Repository [mbed](https://developer.mbed.org/teams/Renesas/code/)
     + Supported function map [mbed](https://developer.mbed.org/teams/Renesas/wiki/GR-PEACH_supported_function_map). Note: LCD, Audio In/out library was supported but mbed RTOS needed.
 - To be able to build the example by mbed compiler online
 ```
