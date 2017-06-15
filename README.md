@@ -56,7 +56,6 @@ http://ds.arm.com/renesas/
 - Hardware
     + manual: [link](https://drive.google.com/open?id=0B_p_VcQ0E_k5OVpTVURiNlpwblk)
 - Software:
-    + Boot process: [info](./Software/Boot_RZA1H.md)
     + Development tool:
         * [e2 studio](https://www.renesas.com/en-us/products/software-tools/tools/ide/e2studio.html)
         * [mbed compiler](https://developer.mbed.org/handbook/mbed-Tools)
@@ -72,3 +71,10 @@ http://ds.arm.com/renesas/
 
 ## BP3595 WiFi module [link](https://developer.mbed.org/components/BP3595-for-GR-PEACH/)
 ![Wifi](./Hardware/BP3595.jpg.200x200_q85.jpg "Wifi")
+
+## Boot sequence and program mechanism
+Update at [Boot_RZA1H.md](./Software/Boot_RZA1H.md)
+P/S: need to be updated
+
+## Protocal GR-Cloud
+Updated at [Protocal.md](./Software/Protocal.md)
